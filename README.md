@@ -1,6 +1,6 @@
 # ⚡ Monster Energy Interactive Carousel
 
-![Preview do Projeto](./assets/preview.png)
+![Preview do Projeto](https://github.com/Caua-Ricken/Monster-Page/blob/main/src/assets/preview.png)
 
 Uma aplicação interativa desenvolvida com **React + Vite**, simulando uma apresentação dinâmica de produtos da Monster Energy.
 
