@@ -1,0 +1,115 @@
+.master{
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+    transition: background-color 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.title{
+  z-index: 2;
+  font-size: 30rem;
+  text-transform: uppercase;
+  background: linear-gradient(to right, black, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+@keyframes titleUp {
+  from {
+    transform: translate(-50%, 50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+
+.img{
+  height: 70rem;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.prev img,
+.next img {
+  max-width: 20rem;
+  position: absolute;
+  bottom: 3rem;
+}
+
+.prev img {
+  left: 3rem;
+}
+
+.next img {
+  right: 3rem;
+}
+
+.number{
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translate(-250%, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translate(150%, -50%) scale(0.8);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+.indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.bar {
+  width: 4rem;
+  height: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+
+.bar.active {
+  background-color: white;
+  transform: scaleX(1.3);
+}
+
