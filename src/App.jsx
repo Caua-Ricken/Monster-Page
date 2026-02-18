@@ -5,19 +5,19 @@ function App() {
 
   const pages = [
     {
-      name: "pink",
+      name: "Pipeline Punch",
       bg: "#b23257",
       image: "./public/pink.png",
       pass: "./public/rosa.png"
     },
     {
-      name: "black",
+      name: "Monster Energy",
       bg: "#383838",
       image: "./public/black.png",
       pass: "./public/preto.png"
     },
     {
-      name: "red",
+      name: "Water melon",
       bg: "#720000",
       image: "./public/red.png",
       pass: "./public/verme.png"
@@ -46,7 +46,7 @@ function App() {
     current === pages.length - 1 ? 0 : current + 1;
 
   return (
-    <div className='master' style={{ backgroundColor: pages[current].bg }}>
+    <div className='master' style={{ background: `radial-gradient(circle at center, ${pages[current].bg} 0%, #111 80%)` }}>
 
       <h1 className='title' key={current} style={{
         animation: "titleUp 0.6s ease forwards"
@@ -78,6 +78,17 @@ function App() {
           />
         ))}
       </div>
+
+      <div className="info left">
+        <h2>ENERGIA</h2>
+        <p>Performance máxima.</p>
+      </div>
+
+      <div className="info right">
+        <h2>{pages[current].name.toUpperCase()}</h2>
+        <p>Sabor intenso e marcante.</p>
+      </div>
+
     </div>
   )
 }
