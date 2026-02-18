@@ -1,5 +1,14 @@
 import { useState } from 'react'
 import './App.css'
+// import de imagens
+import pink from "./assets/pink.png"
+import rosa from "./assets/rosa.png"
+
+import black from "./assets/black.png"
+import preto from "./assets/preto.png"
+
+import red from "./assets/red.png"
+import verme from "./assets/verme.png"
 
 function App() {
 
@@ -7,20 +16,20 @@ function App() {
     {
       name: "Pipeline Punch",
       bg: "#b23257",
-      image: "./public/pink.png",
-      pass: "./public/rosa.png"
+      image: pink,
+      pass: rosa
     },
     {
       name: "Monster Energy",
       bg: "#383838",
-      image: "./public/black.png",
-      pass: "./public/preto.png"
+      image: black,
+      pass: preto
     },
     {
       name: "Water melon",
       bg: "#720000",
-      image: "./public/red.png",
-      pass: "./public/verme.png"
+      image: red,
+      pass: verme
     }
   ]
 
